@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kirotawa's blog - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2023-01-13T14:25:00-03:00</updated><entry><title>Welcome to my blog :)</title><link href="/welcome-to-my-blog.html" rel="alternate"></link><published>2023-01-13T14:25:00-03:00</published><updated>2023-01-13T14:25:00-03:00</updated><author><name>kirotawa</name></author><id>tag:None,2023-01-13:/welcome-to-my-blog.html</id><summary type="html">&lt;p&gt;Personal blog&lt;/p&gt;</summary><content type="html">&lt;p&gt;Welcome to my blog :)!&lt;/p&gt;</content><category term="misc"></category><category term="first"></category></entry><entry><title>"Creating a gif from a screencap"</title><link href="/creating-a-gif-from-a-screencap.html" rel="alternate"></link><published>2015-08-18T00:54:00-03:00</published><updated>2015-08-18T00:54:00-03:00</updated><author><name>Kirotawa</name></author><id>tag:None,2015-08-18:/creating-a-gif-from-a-screencap.html</id><content type="html">&lt;p&gt;First you need to recorder you screen. In order to this you can use kazam.
+After you have recorder you screen.&lt;/p&gt;
+&lt;h1&gt;step one&lt;/h1&gt;
+&lt;p&gt;install imagemagick mplayer&lt;/p&gt;
+&lt;h1&gt;step two&lt;/h1&gt;
+&lt;p&gt;mplayer -ao null &lt;file-name&gt; -vo jpeg:outdir=path-where-save&lt;/p&gt;
+&lt;h1&gt;step three&lt;/h1&gt;
+&lt;p&gt;convert path-where-save/*  image.gif&lt;/p&gt;
+&lt;p&gt;After this, it's done!&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>"Boostrap x Django messages"</title><link href="/boostrap-x-django-messages.html" rel="alternate"></link><published>2015-08-04T19:00:20-03:00</published><updated>2015-08-04T19:00:20-03:00</updated><author><name>Kirotawa</name></author><id>tag:None,2015-08-04:/boostrap-x-django-messages.html</id><summary type="html">&lt;p&gt;Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap, instead second has -danger while
+Django -error. What happens is that you won't be able to see your beautiful message in a proper way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap, instead second has -danger while
+Django -error. What happens is that you won't be able to see your beautiful message in a proper way.&lt;/p&gt;
+&lt;p&gt;In order to fix this is very simple. Into your settings.py file&lt;/p&gt;
+&lt;p&gt;{% highlight python %}&lt;/p&gt;
+&lt;h1&gt;adding this line&lt;/h1&gt;
+&lt;p&gt;from django.contrib.messages import constants as message_constants&lt;/p&gt;
+&lt;h1&gt;and redefine tags constants to match with boostrap messages&lt;/h1&gt;
+&lt;p&gt;MESSAGE_TAGS = {
+    message_constants.DEBUG: 'debug',
+    message_constants.INFO: 'info',
+    message_constants.SUCCESS: 'success',
+    message_constants.WARNING: 'warning',
+    message_constants.ERROR: 'danger',
+ }&lt;/p&gt;
+&lt;p&gt;{% endhighlight %}&lt;/p&gt;
+&lt;p&gt;After this, it's done. :)&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>"Jekyll bug?"</title><link href="/jekyll-bug.html" rel="alternate"></link><published>2015-08-01T03:06:10-03:00</published><updated>2015-08-01T03:06:10-03:00</updated><author><name>Kirotawa</name></author><id>tag:None,2015-08-01:/jekyll-bug.html</id><content type="html">&lt;p&gt;If you tried to use jekyll and get a message like that: autodetect': Could not find a JavaScript runtime
+Don't Panic!&lt;/p&gt;
+&lt;p&gt;All you need to do is install nodejs it'll be fixed.&lt;/p&gt;</content><category term="misc"></category></entry></feed>
