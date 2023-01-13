@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kirotawa's blog - physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2023-01-13T16:35:35-03:00</updated><entry><title>O problema do iglu</title><link href="/o-problema-do-iglu.html" rel="alternate"></link><published>2023-01-13T16:35:35-03:00</published><updated>2023-01-13T16:35:35-03:00</updated><author><name>Kirotawa</name></author><id>tag:None,2023-01-13:/o-problema-do-iglu.html</id><summary type="html">&lt;p&gt;O problema do deslizamento do topo de um iglu&lt;/p&gt;</summary><content type="html">&lt;p&gt;Dada o sistema/imagem abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Uma partícula desliza do topo de um iglu até o ponto em que perde o contato" src="/images/problem.png"&gt;&lt;/p&gt;
+&lt;p&gt;Determinar o ângulo Θ em que a partícula/corpo perde o contato com a superfície do iglu.&lt;/p&gt;
+&lt;p&gt;Dicas: conservação da energia; forças fictícias; sistema estático.&lt;/p&gt;</content><category term="physics"></category></entry></feed>
