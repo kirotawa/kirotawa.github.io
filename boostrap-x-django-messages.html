@@ -15,6 +15,7 @@
                 <h1><a href="/">Kirotawa's blog</a></h1>
                 <nav><ul>
                     <li class="active"><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/tips.html">tips</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -35,22 +36,24 @@
                 By                         <a class="url fn" href="/author/kirotawa.html">Kirotawa</a>
         </address>
 <p>In <a href="/category/misc.html">misc</a>.</p>
-
+<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/bootstrap.html">bootstrap</a> <a href="/tag/web.html">web</a> </p>
 </footer><!-- /.post-info -->      <p>Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap, instead second has -danger while
 Django -error. What happens is that you won't be able to see your beautiful message in a proper way.</p>
 <p>In order to fix this is very simple. Into your settings.py file</p>
-<p>{% highlight python %}</p>
-<h1>adding this line</h1>
-<p>from django.contrib.messages import constants as message_constants</p>
-<h1>and redefine tags constants to match with boostrap messages</h1>
-<p>MESSAGE_TAGS = {
-    message_constants.DEBUG: 'debug',
-    message_constants.INFO: 'info',
-    message_constants.SUCCESS: 'success',
-    message_constants.WARNING: 'warning',
-    message_constants.ERROR: 'danger',
- }</p>
-<p>{% endhighlight %}</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># adding this line</span>
+<span class="kn">from</span> <span class="nn">django.contrib.messages</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">message_constants</span>
+
+<span class="c1"># and redefine tags constants to match with boostrap messages</span>
+<span class="n">MESSAGE_TAGS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span> <span class="s1">&#39;debug&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span> <span class="s1">&#39;success&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span> <span class="s1">&#39;warning&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span> <span class="s1">&#39;danger&#39;</span><span class="p">,</span>
+ <span class="p">}</span>
+</code></pre></div>
+
+
 <p>After this, it's done. :)</p>
     </div><!-- /.entry-content -->
 
@@ -63,7 +66,6 @@ Django -error. What happens is that you won't be able to see your beautiful mess
                             <li><a href="https://getpelican.com/">Pelican</a></li>
                             <li><a href="https://www.python.org/">Python.org</a></li>
                             <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
@@ -71,8 +73,7 @@ Django -error. What happens is that you won't be able to see your beautiful mess
                         <ul>
                             <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
+                            <li><a href="https://github.com/kirotawa">github</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->

@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Kirotawa's blog - first</title>
+        <title>Kirotawa's blog - bootstrap</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Kirotawa's blog Atom Feed" />
 </head>
@@ -20,18 +20,35 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/welcome-to-my-blog.html">Welcome to my blog :)</a></h1>
+                    <h1 class="entry-title"><a href="/boostrap-x-django-messages.html">"Boostrap x Django messages"</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2023-01-13T14:25:00-03:00">
-                Published: sex 13 janeiro 2023
+        <abbr class="published" title="2015-08-04T19:00:20-03:00">
+                Published: ter 04 agosto 2015
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/author/kirotawa.html">kirotawa</a>
+                By                         <a class="url fn" href="/author/kirotawa.html">Kirotawa</a>
         </address>
 <p>In <a href="/category/misc.html">misc</a>.</p>
-<p>tags: <a href="/tag/first.html">first</a> </p>
-</footer><!-- /.post-info --><p>Welcome to my blog :)!</p>                </article>
+<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/bootstrap.html">bootstrap</a> <a href="/tag/web.html">web</a> </p>
+</footer><!-- /.post-info --><p>Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap, instead second has -danger while
+Django -error. What happens is that you won't be able to see your beautiful message in a proper way.</p>
+<p>In order to fix this is very simple. Into your settings.py file</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># adding this line</span>
+<span class="kn">from</span> <span class="nn">django.contrib.messages</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">message_constants</span>
+
+<span class="c1"># and redefine tags constants to match with boostrap messages</span>
+<span class="n">MESSAGE_TAGS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span> <span class="s1">&#39;debug&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span> <span class="s1">&#39;success&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span> <span class="s1">&#39;warning&#39;</span><span class="p">,</span>
+    <span class="n">message_constants</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span> <span class="s1">&#39;danger&#39;</span><span class="p">,</span>
+ <span class="p">}</span>
+</code></pre></div>
+
+
+<p>After this, it's done. :)</p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kirotawa's blog - tips</title><link href="/" rel="alternate"></link><link href="/feeds/tips.atom.xml" rel="self"></link><id>/</id><updated>2015-08-18T00:54:00-03:00</updated><entry><title>Creating a gif from a screencap</title><link href="/creating-a-gif-from-a-screencap.html" rel="alternate"></link><published>2015-08-18T00:54:00-03:00</published><updated>2015-08-18T00:54:00-03:00</updated><author><name>Kirotawa</name></author><id>tag:None,2015-08-18:/creating-a-gif-from-a-screencap.html</id><summary type="html">&lt;p&gt;Creating a GIF in terminal&lt;/p&gt;</summary><content type="html">&lt;p&gt;First you need to recorder you screen. In order to this you can use kazam.
+After you have recorder you screen.&lt;/p&gt;
+&lt;h1&gt;step one&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;mplayer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;step two&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mplayer&lt;span class="w"&gt; &lt;/span&gt;-ao&lt;span class="w"&gt; &lt;/span&gt;null&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;file-name&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;-vo&lt;span class="w"&gt; &lt;/span&gt;jpeg:outdir&lt;span class="o"&gt;=&lt;/span&gt;path-where-save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;step three&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;convert&lt;span class="w"&gt; &lt;/span&gt;path-where-save/*&lt;span class="w"&gt;  &lt;/span&gt;image.gif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After this, it's done!&lt;/p&gt;</content><category term="tips"></category><category term="tips"></category><category term="mplayer imagemagick gif"></category></entry></feed>
