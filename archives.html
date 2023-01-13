@@ -4,56 +4,31 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>"Boostrap x Django messages"</title>
+        <title>Kirotawa's blog</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-        <meta name="description" content="Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap,..." />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Kirotawa's blog Atom Feed" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Kirotawa's blog</a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/boostrap-x-django-messages.html" rel="bookmark"
-           title="Permalink to "Boostrap x Django messages"">"Boostrap x Django messages"</a></h1>
-    </header>
+<h1>Archives for Kirotawa's blog</h1>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-08-04T19:00:20-03:00">
-                Published: ter 04 agosto 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/kirotawa.html">Kirotawa</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
-
-</footer><!-- /.post-info -->      <p>Recently I need to handle with messages using Django and Boostrap. Issue is that in Django a message.ERROR has not the same tag than Boostrap, instead second has -danger while
-Django -error. What happens is that you won't be able to see your beautiful message in a proper way.</p>
-<p>In order to fix this is very simple. Into your settings.py file</p>
-<p>{% highlight python %}</p>
-<h1>adding this line</h1>
-<p>from django.contrib.messages import constants as message_constants</p>
-<h1>and redefine tags constants to match with boostrap messages</h1>
-<p>MESSAGE_TAGS = {
-    message_constants.DEBUG: 'debug',
-    message_constants.INFO: 'info',
-    message_constants.SUCCESS: 'success',
-    message_constants.WARNING: 'warning',
-    message_constants.ERROR: 'danger',
- }</p>
-<p>{% endhighlight %}</p>
-<p>After this, it's done. :)</p>
-    </div><!-- /.entry-content -->
-
-  </article>
+<dl>
+    <dt>sex 13 janeiro 2023</dt>
+    <dd><a href="/welcome-to-my-blog.html">Welcome to my blog :)</a></dd>
+    <dt>ter 18 agosto 2015</dt>
+    <dd><a href="/creating-a-gif-from-a-screencap.html">"Creating a gif from a screencap"</a></dd>
+    <dt>ter 04 agosto 2015</dt>
+    <dd><a href="/boostrap-x-django-messages.html">"Boostrap x Django messages"</a></dd>
+    <dt>sáb 01 agosto 2015</dt>
+    <dd><a href="/jekyll-bug.html">"Jekyll bug?"</a></dd>
+</dl>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
@@ -68,6 +43,7 @@ Django -error. What happens is that you won't be able to see your beautiful mess
                 <div class="social">
                         <h2>social</h2>
                         <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="#">You can add links in your config file</a></li>
                             <li><a href="#">Another social link</a></li>
